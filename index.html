@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>To Do List | jQuery</title>
+    <!--  Meta tag for mobile devices-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="theme-color" content="#888888" />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="./styles.css">
+    <!-- Source Sans Pro Font -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,400italic,600,700,600italic" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <main>
+        <section class="todo-list-wrapper">
+            <div class="todo-list-container">
+                <div class="mark-all-tasks">
+                    <div class="mark-all-tasks-container">
+                        <span class="mark-all-btn" role="button" id="mark-all-finished">
+                            <span class="btn-label">Mark all as finished</span>
+                        <span class="action-circle completed">
+                                <i class="icons">✔</i>
+                            </span>
+                        </span>
+                        <span class="mark-all-btn move-down" role="button" id="mark-all-incomplete">
+                            <span class="btn-label">Mark all as Incomplete</span>
+                        <span class="action-circle">
+                                <i class="icons">✔</i>
+                            </span>
+                        </span>
+                    </div>
+                </div>
+                <div class="todo-list-header">
+                    <h3>TODOS</h3>
+                    <div class="new-task-wrapper visible">
+                        <input id="new-task" placeholder="Enter new task here. . ."></input>
+                        <span class="add-new-task-btn btn" id="add-task">Add</span>
+                    </div>
+                </div>
+                <div class="todo-list-body">
+                    <ul id="todo-list">
+
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <div class="notification-popup hide">
+            <p>
+                <span class="task"></span>
+                <span class="notification-text"></span>
+            </p>
+        </div>
+    </main>
+
+
+    <!--  HTML Template for tasks-->
+    <script type="text/template" id="task-template">
+        <li class="task">
+            <div class="task-container">
+                <span class="task-label"></span>
+                <span class="task-action-btn">
+						<span class="action-circle large delete-btn" title="Delete Task">
+							<i class="icons">❌</i>
+						</span>
+                <span class="action-circle large complete-btn" title="Mark Complete">
+							<i class="icons">✔</i>
+						</span>
+                </span>
+            </div>
+        </li>
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js "></script>
+    <script type="text/javascript" src="./scripts.js"></script>
+</body>
+
+</html>
